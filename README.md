@@ -23,6 +23,10 @@ The server will start on port 3000 by default.
 
 ### 4. Access the Application
 Open your web browser and go to http://localhost:3000/generate-paper to view the form for generating question papers.
+<div>
+  <img src="https://github.com/user-attachments/assets/af59c91b-794c-49c6-bab9-01dde246d826" width="370" height="350px"> 
+</div>
+
 
  ### 5. API Endpoints
 POST http://localhost:3000/api/generate-paper

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper</title>
+</head>
+<body>
+    <h1>Question Paper</h1>
+    
+    <h2>Easy Questions</h2>
+    <% if (questionPaper.Easy.length > 0) { %>
+        <ul>
+            <% questionPaper.Easy.forEach(question => { %>
+                <li><%= question.question %> (Marks: <%= question.marks %>)</li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No Easy questions available.</p>
+    <% } %>
+    
+    <h2>Medium Questions</h2>
+    <% if (questionPaper.Medium.length > 0) { %>
+        <ul>
+            <% questionPaper.Medium.forEach(question => { %>
+                <li><%= question.question %> (Marks: <%= question.marks %>)</li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No Medium questions available.</p>
+    <% } %>
+    
+    <h2>Hard Questions</h2>
+    <% if (questionPaper.Hard.length > 0) { %>
+        <ul>
+            <% questionPaper.Hard.forEach(question => { %>
+                <li><%= question.question %> (Marks: <%= question.marks %>)</li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No Hard questions available.</p>
+    <% } %>
+    
+    <a href="/api/generate-paper">Generate another paper</a>
+</body>
+</html>
